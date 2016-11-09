@@ -30,10 +30,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-Vg-xA1">
                                         <rect key="frame" x="84" y="0.0" width="32" height="30"/>
                                         <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="Stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLQ-cH-MP0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTU-wu-NTt">
                                         <rect key="frame" x="166" y="0.0" width="62" height="30"/>
                                         <state key="normal" title="Wyczyść"/>
+                                        <connections>
+                                            <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqa-XJ-wm7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -61,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="ClearButton" destination="xTU-wu-NTt" id="PPi-09-kIw"/>
+                        <outlet property="Map" destination="iay-og-5zZ" id="D3S-w9-aGh"/>
                         <outlet property="StartButton" destination="ofp-YX-EZ8" id="fLe-py-UqU"/>
                         <outlet property="StopButton" destination="rfx-Vg-xA1" id="Ctg-ZJ-0M4"/>
                     </connections>
