@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  mapa
-//
-//  Created by Użytkownik Gość on 26.10.2016.
-//  Copyright © 2016 Użytkownik Gość. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -18,7 +10,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var Map: MKMapView!
     var location: CLLocationManager!
     
-    @IBAction func Start(sender: AnyObject) {
+    @IBAction func StartButtonPressed(sender: AnyObject) {
         StartButton.enabled = false
         StopButton.enabled = true
         location.startUpdatingLocation()
@@ -26,14 +18,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    @IBAction func Stop(sender: AnyObject) {
+    @IBAction func StopButtonPressed(sender: AnyObject) {
         StopButton.enabled = false
         StartButton.enabled = true
         location.stopUpdatingLocation()
         Map.showsUserLocation = false
     }
     
-    @IBAction func Clear(sender: AnyObject) {
+    @IBAction func ClearButtonPressed(sender: AnyObject) {
         Map.removeAnnotations(Map.annotations)
     }
     
@@ -49,13 +41,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             location.requestWhenInUseAuthorization()
         }
         
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -69,7 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         var spanDelta = 0.0
         
         if let speed = locations.last?.speed where speed > 0 {
-            spanDelta = (locations.last?.speed)! / 6000
+            spanDelta = speed / 5000
         }
         
         let locationArea = MKCoordinateRegion(center: currentLocation!, span: MKCoordinateSpan(latitudeDelta: spanDelta, longitudeDelta: spanDelta))

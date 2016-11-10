@@ -24,45 +24,39 @@
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
-                                            <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v7-9y-wVA"/>
+                                            <action selector="StartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAI-XP-oUR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-Vg-xA1">
                                         <rect key="frame" x="84" y="0.0" width="32" height="30"/>
                                         <state key="normal" title="Stop"/>
                                         <connections>
-                                            <action selector="Stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLQ-cH-MP0"/>
+                                            <action selector="StopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sru-rv-KqL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTU-wu-NTt">
                                         <rect key="frame" x="166" y="0.0" width="62" height="30"/>
                                         <state key="normal" title="Wyczyść"/>
                                         <connections>
-                                            <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqa-XJ-wm7"/>
+                                            <action selector="ClearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oe8-iF-q34"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3G-2N-s4X">
-                                <rect key="frame" x="20" y="512" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iay-og-5zZ">
                                 <rect key="frame" x="20" y="20" width="560" height="484"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iay-og-5zZ" firstAttribute="leading" secondItem="L3G-2N-s4X" secondAttribute="leading" id="A3R-Yw-aAO"/>
-                            <constraint firstItem="L3G-2N-s4X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ABt-s6-y7K"/>
-                            <constraint firstItem="5IQ-UQ-Ijn" firstAttribute="top" secondItem="L3G-2N-s4X" secondAttribute="bottom" constant="8" symbolic="YES" id="BXg-8n-PNY"/>
-                            <constraint firstItem="L3G-2N-s4X" firstAttribute="trailing" secondItem="iay-og-5zZ" secondAttribute="trailing" id="Mlo-DH-fkf"/>
-                            <constraint firstItem="L3G-2N-s4X" firstAttribute="top" secondItem="iay-og-5zZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Ql0-Xs-GX9"/>
+                            <constraint firstItem="iay-og-5zZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KDB-C1-DeO"/>
+                            <constraint firstItem="5IQ-UQ-Ijn" firstAttribute="top" secondItem="iay-og-5zZ" secondAttribute="bottom" constant="46" id="Ki3-9n-ca0"/>
+                            <constraint firstItem="5IQ-UQ-Ijn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LSU-fh-wsF"/>
                             <constraint firstAttribute="bottom" secondItem="5IQ-UQ-Ijn" secondAttribute="bottom" constant="20" symbolic="YES" id="Rc6-ta-OIx"/>
                             <constraint firstItem="iay-og-5zZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bUh-Tl-Ubt"/>
-                            <constraint firstItem="5IQ-UQ-Ijn" firstAttribute="centerX" secondItem="L3G-2N-s4X" secondAttribute="centerX" id="hCv-fK-BcH"/>
                             <constraint firstItem="iay-og-5zZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jbS-rt-tpg"/>
+                            <constraint firstItem="iay-og-5zZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ln6-MH-VCM"/>
+                            <constraint firstItem="iay-og-5zZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t5f-VC-Bdd"/>
                         </constraints>
                     </view>
                     <connections>
